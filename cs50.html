@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--for utilizing responsive web design by viewport we add this below code-->
+    <!--types of utilizing responsive designs are 1)viewport 2) media queries 3) flexbox 4) grids-->
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>hello cs50!</title>
+    <!-- we can even add style element here by adding <style>adding styles here will be applied to selected elements like h1{color:red}</style>-->
+    <!--but this has a disadvantage that all style code needs to be copied and pasted in every webpage, so it is better to move all styling code to seperate css file-->
+    <link rel="stylesheet" href="cs50css.css">
+    <style>
+        @media (min-width:600px) {
+            body{background-color: grey;
+            }
+        }
+
+        @media (max-width:599px){
+            body{background-color: bisque;}
+        }
+        #todolists{
+            display: flex;
+            flex-wrap: wrap; 
+        }
+
+        #grid {
+            background-color: springgreen;
+            display: grid;
+            padding: 20px;
+            grid-column-gap: 20px;
+            grid-row-gap: 10px;
+            grid-template-columns: 200px 200px auto;
+        }
+
+        .grid-item{
+            background-color: white;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    hello world of html and css learning!
+    <!-- to view the total page structure of the whole document i.e, total tree structure, it can be called as document object model-->
+    <h1>this is a big heading</h1>
+    <h6 class="small">this is the smallest heading to test flex function on the webpage, so that if i compress the screen the text should be visible in multiple lines according to device screen instead of any need to scroll horizontally</h6>
+    <!--using class here to select this particular element, in css we use . to select a class-->
+    <!--we can also use id element, in css we use # to select id-->
+
+
+    <div id="grid">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        <div class="grid-item">11</div>
+        <div class="grid-item">12</div>
+
+    </div>
+<br>
+<br>
+<div id="todolists">
+    <div>
+
+    ordered list:
+    <ol>
+        <li>ibm full stack certificate</li>
+        <li>business analytics certificate</li>
+        <li>python programming language</li>
+    </ol>
+    </div>
+    <br>
+    <br>
+    <div>
+    making an unordered list here:
+    <ul>
+        <li>become a software developer</li>
+        <li>invent something</li>
+        <li>by 2027</li>
+    </ul>
+    </div>
+</div>
+
+    <a href="https://google.com">click here to search in google</a> <br>
+    <a href="https://youtube.com">watch videos here</a>
+    <br>
+    <br>
+
+    <img src="mypic.JPG" alt="srikanth_picture" width="200" >
+
+
+    <table>
+        <thead>   <!--thead represents columns in the table-->
+            <th>date</th>
+            <th>course</th>
+            <th>status</th>
+        </thead>
+
+        <tbody>
+            <tr> <!--represents each row-->
+                <td>2020</td>
+                <td>google IT</td>
+                <td>completed</td>
+            </tr>
+
+            <tr>
+                <td>2021</td>
+                <td>google digital marketing</td>
+                <td>completed</td>
+            </tr>
+
+            <tr>
+                <td>2022</td>
+                <td>IBM full stack cloud developer</td>
+                <td>in progress</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+
+<form>
+        <input type="text" placeholder="full name" name="name"><br><br>
+        <input type="password" placeholder="password" name="password"><br><br>
+        
+    
+    <div>
+        location?
+        <input type="radio" value="india" name="location"> India
+        <input type="radio" value="usa" name="location"> Usa
+        <input type="radio" value="uk" name="location"> Uk
+        <input type="radio" value="australia" name="location"> Australia
+    </div>
+    <br>
+
+    <div>
+        <input name="city" list="cities" placeholder="city">  <!--for drop down list of anything with browser enabled autofill-->
+        <datalist id="cities">
+            <option value="bangalore">
+            <option value="hyderabad">
+            <option value="chennai">
+            <option value="kochi">
+
+        </datalist>
+    </div>
+    <br>
+    <input type="submit">
+
+</form>
+
+
+
+
+
+</body>
+
+
+</html>

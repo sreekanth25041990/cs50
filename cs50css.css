@@ -1,0 +1,46 @@
+h1{
+    color: green;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: pink;
+    padding: 20px;
+    margin: 10% 40% 10% 40%;
+    border: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+ 
+}
+/* css specificity = inline, id , class, type(like h1, div, etc..) */
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+/* to add multiple selectors we use ,  to add descendents we use like thead td*/
+/* a,b = multiple element selector
+   a b = descendent selector
+   a>b = child selector
+   a + b= adjacent sibling selector
+   [a=b] = attribute selector
+   a:b = pseudoclass selector
+   a::b = pseudo element selector */
+th,td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.small {
+    color: blue;
+    font-size: 15px;
+} 
+
+/* selecting a particular attribute here to show in red color*/
+ a[href="https://youtube.com"]{
+     color: red;
+ }
+
+/* to add colour when we hover on any option or link on webpage */
+a:hover{
+    background-color: green;
+}
